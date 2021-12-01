@@ -1,1 +1,2 @@
-# advent-of-code-2021-python
+# AdventOfCode 2021
+My Advent of Code solutions written in Python 3
