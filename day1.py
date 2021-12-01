@@ -7,22 +7,22 @@ def read_input():
 
 def part_one(input):
     increase = 0
-    prev_max = 0
+    prev_max = input[0]
     for v in input:
         if v > prev_max:
             increase += 1
         prev_max = v
-    return increase - 1
+    return increase
 
 def part_two(input):
     increase = 0
-    prev_max = 0
+    prev_max = input[0] + input[1] + input[2]
     for i in range(len(input) - 2):
         result = input[i] + input[i + 1] + input[i + 2]
         if result > prev_max:
             increase += 1
         prev_max = result
-    return increase - 1
+    return increase
 
 print('Part 1:', part_one(read_input()))
 print('Part 2:', part_two(read_input()))
