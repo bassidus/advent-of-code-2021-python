@@ -1,7 +1,7 @@
 from requests import get
 
 
-def fetch_ints(url):
+def fetch(url, return_type):
     result = []
 
     with open('.cookie') as cookie:
@@ -9,7 +9,10 @@ def fetch_ints(url):
 
     response = get(url, cookies=cookies)
     response = response.text.split()
-    for value in response:
-        result.append(int(value))
 
-    return result
+    if return_type == int:
+        for value in response:
+            result.append(int(value))
+        return result
+
+    return response

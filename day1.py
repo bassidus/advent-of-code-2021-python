@@ -1,4 +1,4 @@
-from utils import fetch_ints
+from utils import fetch
 
 
 def part_one(input):
@@ -22,6 +22,6 @@ def part_two(input):
     return increase
 
 
-input = fetch_ints('https://adventofcode.com/2021/day/1/input')
+input = fetch('https://adventofcode.com/2021/day/1/input', int)
 print('Part 1:', part_one(input))
 print('Part 2:', part_two(input))
