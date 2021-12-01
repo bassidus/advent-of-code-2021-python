@@ -5,6 +5,7 @@ def read_input():
             input.append(int(line))
     return input
 
+
 def part_one(input):
     increase = 0
     prev_max = input[0]
@@ -14,15 +15,17 @@ def part_one(input):
         prev_max = v
     return increase
 
+
 def part_two(input):
     increase = 0
-    prev_max = input[0] + input[1] + input[2]
+    prev_max = sum(input[: 3])
     for i in range(len(input) - 2):
-        result = input[i] + input[i + 1] + input[i + 2]
+        result = sum(input[i: i + 3])
         if result > prev_max:
             increase += 1
         prev_max = result
     return increase
+
 
 print('Part 1:', part_one(read_input()))
 print('Part 2:', part_two(read_input()))
