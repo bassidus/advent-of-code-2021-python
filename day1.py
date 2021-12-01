@@ -1,9 +1,4 @@
-def read_input():
-    input = []
-    with open('day1_input.txt') as file:
-        for line in file:
-            input.append(int(line))
-    return input
+from utils import fetch_ints
 
 
 def part_one(input):
@@ -27,5 +22,6 @@ def part_two(input):
     return increase
 
 
-print('Part 1:', part_one(read_input()))
-print('Part 2:', part_two(read_input()))
+input = fetch_ints('https://adventofcode.com/2021/day/1/input')
+print('Part 1:', part_one(input))
+print('Part 2:', part_two(input))
