@@ -2,6 +2,7 @@ from utils import fetch
 
 
 def part_one(input):
+    input = list(map(int, input))
     increase = 0
     prev_max = input[0]
     for v in input:
@@ -12,6 +13,7 @@ def part_one(input):
 
 
 def part_two(input):
+    input = list(map(int, input))
     increase = 0
     prev_max = sum(input[: 3])
     for i in range(len(input) - 2):
@@ -22,6 +24,6 @@ def part_two(input):
     return increase
 
 
-input = fetch('https://adventofcode.com/2021/day/1/input', int)
+input = fetch('https://adventofcode.com/2021/day/1/input')
 print('Part 1:', part_one(input))
 print('Part 2:', part_two(input))
